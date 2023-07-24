@@ -1,0 +1,29 @@
+.activated .div-bottom {
+    border: 0;
+}
+#main .disabled {
+    background: var(--light-secondary-color);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#main .disabled:hover {
+    background: var(--lighter-secondary-color);
+}
+
+#empty-left.empty-left-activated {
+    border-bottom: var(--border-size) solid var(--secondary-color);
+    border-right: var(--border-size) solid var(--secondary-color);
+    z-index: 1; 
+}
+#empty-right.empty-right-activated {
+    border-bottom: var(--border-size) solid var(--secondary-color);
+    border-left: var(--border-size) solid var(--secondary-color);
+    z-index: 1; 
+}
+#main .border-bottom-left-radius-activated {
+    border-bottom-left-radius: var(--border-radius-size);
+}
+#main .border-bottom-right-radius-activated {
+    border-bottom-right-radius: var(--border-radius-size);
+    z-index: 1;
+}

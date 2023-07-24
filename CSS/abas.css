@@ -1,0 +1,90 @@
+#main {
+    margin: 0 calc(-1 * var(--container-padding)) 0 calc(-1 * var(--container-padding));
+    /*Aqui, a margem vai ser o negativo do padding do container, para que a div ocupe toda a width do container*/
+    display: grid;
+    grid-template-columns: 1fr 42% 42% 1fr;
+    /*Fiz no JS a fórmula: As tabs vão ocupar 85% da div*/
+}
+
+#main button {
+    height: 50px;
+    padding: 0;
+    border: 0;
+    position: relative;
+    border-radius: var(--border-radius-size);
+    background: #fff;
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    margin-left: calc(-1 * var(--border-size));
+    /* Para as bordas "colapsarem" */
+}
+
+#main button.initial-hover:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+#main button:active {
+    background-color: var(--primary-color);
+    transition: all 0ms ease;
+}
+
+#main button p {
+    font-family: 'Open sans', sans-serif;
+    font-size: large;
+    margin: 0;
+}
+
+#main button div {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+}
+
+.div-top {
+    top: 0;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border: var(--border-size) solid var(--secondary-color);
+    border-bottom: 0;
+}
+
+.div-bottom {
+    bottom: 0;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border: var(--border-size) solid var(--secondary-color);
+    border-top: 0;
+}
+
+#empty-left {
+    width: 50%;
+    height: 50%;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+#empty-right {
+    width: 50%;
+    height: 50%;
+    align-self: flex-end;
+    position: relative;
+    left: calc(-1 * var(--border-size));
+}
+
+#aux {
+    height: var(--border-radius-size);
+    margin: 0 calc(-1 * var(--container-padding)) 0 calc(-1 * var(--container-padding));
+    display: flex;
+    justify-content: space-between;
+}
+#left-aux, #right-aux {
+    display: none;
+    width: calc(var(--container-width) * 0.05); 
+    /* Vai sempre ser 5% do max with, o suficiente para "encontrar" a empty-left */
+    border-top: var(--border-size) solid var(--secondary-color);
+    position: relative;
+    top: calc(-1 * var(--border-size));
+}
+#left-aux {border-top-left-radius: var(--border-radius-size);}
+#right-aux {border-top-right-radius: var(--border-radius-size);}
