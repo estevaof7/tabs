@@ -33,10 +33,10 @@ function setSizeOfTabs (numberOfTabs) {
     main.style.gridTemplateColumns = `1fr${tabs}1fr`;
 }
 function addMiddleTab () {
+    if (main.childElementCount < 14) {
     main.insertBefore(createMidTab(), main.children[numberOfTabs - 1]);
     setSizeOfTabs(numberOfTabs);
+    }
 }
 
-addMidTab.addEventListener('click', ()=> {
-    if (main.childElementCount < 14) addMiddleTab();
-});
+addMidTab.addEventListener('click', addMiddleTab);
