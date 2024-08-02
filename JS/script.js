@@ -25,6 +25,8 @@ function defaultOnClick() {
     content.style.display = 'block';
 
     addMidTab.removeEventListener('click', addMiddleTab);
+    addMidTab.innerHTML = 'Go back';
+    addMidTab.addEventListener('click', refreshPage);
 }
 
 firstButton.addEventListener('click', function () {

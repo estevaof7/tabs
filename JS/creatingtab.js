@@ -38,5 +38,8 @@ function addMiddleTab () {
     setSizeOfTabs(numberOfTabs);
     }
 }
+function refreshPage () {
+    location.reload();
+}
 
 addMidTab.addEventListener('click', addMiddleTab);
